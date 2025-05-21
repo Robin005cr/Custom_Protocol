@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : CMake project for EncodeDecode, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.10)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -9,10 +9,18 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("EncodeDecode")
+project (EncodeDecode)
 
 # Add source to this project's executable.
-add_executable (EncodeDecode "EncodeDecode.cpp" "EncodeDecode.h")
+# Include directories
+include_directories(${PROJECT_SOURCE_DIR}/header)
+
+# Source files
+file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+file(GLOB_RECURSE HEADERS ${PROJECT_SOURCE_DIR}/header/*.hpp)
+
+# Add executable
+add_executable(EncodeDecode ${SOURCES} ${HEADERS})
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET EncodeDecode PROPERTY CXX_STANDARD 20)
