@@ -1,6 +1,6 @@
-﻿/*
+/*
  * project   : https://github.com/Robin005cr/Custom_Protocol
- * file name : main.cpp
+ * file name : message_container.hpp
  * author    : Robin CR
  * mail id   : robinchovallurraju@gmail.com
  * portfolio : https://robin005cr.github.io/
@@ -10,17 +10,9 @@
  * I value constructive feedback and aim to continuously improve the quality of the work.
  *
  */
-#include <iostream>
-#include<format>
-#include "decode.hpp"
-#include "encode.hpp"
-#include "message_container.hpp"
-using namespace std;
-
-int main()
+#pragma once
+class MessageCont
 {
-    int TemperatureData = 42;
-    cout << "encode(TemperatureData):" ;
+	int value;
 
-    return 0;
-}
+};
