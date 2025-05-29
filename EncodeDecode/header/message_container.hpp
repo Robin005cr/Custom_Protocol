@@ -13,6 +13,7 @@
 #pragma once
 class MessageCont
 {
+public:
 	int value;
 
 };

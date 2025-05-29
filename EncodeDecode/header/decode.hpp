@@ -11,7 +11,10 @@
  *
  */
 #pragma once
+#include <string>
+using namespace std;
 class Decode
 {
 public:
+    void decodeFun(string data);
 };

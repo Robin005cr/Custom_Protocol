@@ -19,8 +19,15 @@ using namespace std;
 
 int main()
 {
+    
+    
     int TemperatureData = 42;
-    cout << "encode(TemperatureData):" ;
+    MessageCont obj;
+    obj.value = TemperatureData;
+    Encode Encoder;
+    string EncodedData = Encoder.encodeFun(obj.value);
+    
+    cout << "encode(TemperatureData):"<< EncodedData;
 
     return 0;
 }

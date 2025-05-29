@@ -23,7 +23,7 @@ string Encode::encodeString(int data)
 {
     string hexStr = std::format("{:x}", data);
 
-    cout << "Hex: " << hexStr << endl; // Output: ff
+    //cout << "Hex: " << hexStr << endl; 
     startByte = "30";
     endByte = "50";
     messageLength = "02";

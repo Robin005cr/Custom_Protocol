@@ -21,6 +21,5 @@ private:
 public:
     void setOffset(int &data);
     string encodeString(int data);
-
     string encodeFun(int &data);
 };

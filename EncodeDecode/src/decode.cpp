@@ -11,3 +11,7 @@
  *
  */
 #include "decode.hpp"
+void Decode::decodeFun(string data)
+{
+    
+}
